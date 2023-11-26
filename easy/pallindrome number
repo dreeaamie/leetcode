@@ -1,0 +1,50 @@
+bool isPalindrome(int x) {
+long int reverse = 0;
+long int remainder;
+long int real=x;
+
+if (x < 0)
+  {
+    return false;
+  }
+
+     else {
+    //  for(int i=0;i<=x;i++){
+        while(x>0) { 
+    remainder = x % 10;
+    reverse = reverse * 10 + remainder;
+    x /= 10;
+           }
+  }
+  if(real==reverse){
+      return true;
+  }
+  else 
+  return false;
+}
+//  if(x<0 || x!=0 && x%10 ==0 ) return false;
+//     int check=0;
+//     while(x>check){
+//         check = check*10 + x%10;
+//         x/=10;
+//     }
+//     return (x==check|| x==check/10 );
+// }
+
+// bool isPalindrome(int x){
+//     if(x < 0 ||x != 0 && x%10 == 0)
+//         return false;
+//     if(x / 10 == 0)
+//         return true;
+//     long int sum = 0;
+//     long int temp = x;
+//     while(x > 0){
+//         sum = sum * 10 + x % 10;
+//         x /= 10;
+//         if(sum == x || x / 10 == sum){
+//             return true;
+//         }
+//     }
+//     if(sum == temp) return true;
+//     return false;
+// }
